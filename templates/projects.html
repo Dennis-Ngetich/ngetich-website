@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dennis Ngetich | Projects</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <a href="/">
+
+                    <img
+                        src="{{ url_for(
+                            'static',
+                            filename='images/logo.png'
+                        ) }}"
+                        alt="Ngetich Logo"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                ☰
+
+            </button>
+
+
+            <!-- NAVIGATION LINKS -->
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/about">
+                    About
+                </a>
+
+                <a href="/services">
+                    Services
+                </a>
+
+                <a href="/projects" class="active">
+                    Projects
+                </a>
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PROJECTS HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-text">
+
+                <p class="welcome">
+                    MY WORK
+                </p>
+
+
+                <h1>
+
+                    My
+
+                    <span>
+                        Projects
+                    </span>
+
+                </h1>
+
+
+                <p class="description">
+
+                    Here are some of the projects and
+                    digital solutions I am building as
+                    I continue developing my skills.
+
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/profile.jpg'
+                    ) }}"
+                    alt="Dennis Ngetich"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="section projects-section">
+
+        <h2>
+            Featured Projects
+        </h2>
+
+
+        <p>
+            Here are some of my current and future projects.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Personal Website
+                </h3>
+
+
+                <p>
+
+                    A personal website built using
+                    Python, Flask, HTML and CSS.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        Flask
+                    </span>
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Contact Management System
+                </h3>
+
+
+                <p>
+
+                    A contact system that allows
+                    visitors to send messages which
+                    are stored in a database.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Flask
+                    </span>
+
+                    <span>
+                        SQLite
+                    </span>
+
+                    <span>
+                        Database
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Business Website
+                </h3>
+
+
+                <p>
+
+                    A professional website designed
+                    for businesses and organizations.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Web Design
+                    </span>
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Digital Solutions
+                </h3>
+
+
+                <p>
+
+                    Simple technology solutions designed
+                    to help solve everyday problems.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Technology
+                    </span>
+
+                    <span>
+                        Innovation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
+    <section class="cta">
+
+        <h2>
+            Have a Project Idea?
+        </h2>
+
+
+        <p>
+
+            Let's discuss your idea and turn it
+            into a digital solution.
+
+        </p>
+
+
+        <a href="/contact"
+           class="btn">
+
+            Contact Me
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         PROFESSIONAL FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Dennis Ngetich
+                </h3>
+
+
+                <p>
+
+                    Building modern websites and
+                    simple digital solutions using
+                    technology.
+
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Home
+                </a>
+
+
+                <a href="/about">
+                    About
+                </a>
+
+
+                <a href="/services">
+                    Services
+                </a>
+
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    Kenya
+                </p>
+
+
+                <p>
+                    0728 426 289
+                </p>
+
+
+                <a
+                    href="https://wa.me/254728426289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Dennis Ngetich.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <a
+        href="#top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+
+        ↑
+
+    </a>
+
+
+    <!-- =========================
+         WHATSAPP BUTTON
+    ========================== -->
+
+    {% include "whatsapp.html" %}
+
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const mobileMenuButton =
+            document.getElementById(
+                "mobileMenuButton"
+            );
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        mobileMenuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle(
+                    "mobile-open"
+                );
+
+
+                const isOpen =
+                    navLinks.classList.contains(
+                        "mobile-open"
+                    );
+
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+
+                mobileMenuButton.innerHTML =
+                    isOpen ? "✕" : "☰";
+
+            }
+        );
+
+
+        const menuLinks =
+            navLinks.querySelectorAll("a");
+
+
+        menuLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "mobile-open"
+                        );
+
+
+                        mobileMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        mobileMenuButton.innerHTML =
+                            "☰";
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

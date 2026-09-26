@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Dennis Ngetich - Web development, website design and digital solutions.">
+
+    <title>Dennis Ngetich | Home</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <a href="/">
+
+                    <img
+                        src="{{ url_for(
+                            'static',
+                            filename='images/logo.png'
+                        ) }}"
+                        alt="Ngetich Logo"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                ☰
+
+            </button>
+
+
+            <!-- NAVIGATION LINKS -->
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="/" class="active">
+                    Home
+                </a>
+
+                <a href="/about">
+                    About
+                </a>
+
+                <a href="/services">
+                    Services
+                </a>
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MODERN HERO SECTION
+    ========================== -->
+
+    <section class="modern-hero">
+
+        <div class="hero-background-shape shape-one"></div>
+
+        <div class="hero-background-shape shape-two"></div>
+
+
+        <div class="modern-hero-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="modern-hero-text">
+
+
+                <p class="hero-small-title">
+
+                    👋 WELCOME TO MY WEBSITE
+
+                </p>
+
+
+                <h1>
+
+                    Hello, I'm
+
+                    <span>
+                        Dennis Ngetich
+                    </span>
+
+                </h1>
+
+
+                <h2>
+
+                    Web Developer &
+                    Digital Solutions Creator
+
+                </h2>
+
+
+                <p class="modern-description">
+
+                    I build modern websites, clean digital
+                    experiences and simple technology solutions
+                    for individuals and businesses.
+
+                </p>
+
+
+                <!-- HERO BUTTONS -->
+
+                <div class="modern-hero-buttons">
+
+
+                    <a
+                        href="/projects"
+                        class="modern-primary-button"
+                    >
+
+                        View My Work
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="/contact"
+                        class="modern-secondary-button"
+                    >
+
+                        Contact Me
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- QUICK INFORMATION -->
+
+                <div class="hero-highlights">
+
+
+                    <div class="hero-highlight">
+
+                        <strong>
+                            Web
+                        </strong>
+
+                        <span>
+                            Development
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <strong>
+                            Digital
+                        </strong>
+
+                        <span>
+                            Solutions
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <strong>
+                            Modern
+                        </strong>
+
+                        <span>
+                            Design
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="modern-hero-image">
+
+
+                <div class="image-glow"></div>
+
+
+                <div class="image-container">
+
+                    <img
+                        src="{{ url_for(
+                            'static',
+                            filename='images/profile.jpg'
+                        ) }}"
+                        alt="Dennis Ngetich"
+                    >
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <span>
+                        💻
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Web Development
+                        </strong>
+
+                        <small>
+                            Modern websites
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span>
+                        🚀
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Digital Solutions
+                        </strong>
+
+                        <small>
+                            Simple & useful
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================== -->
+
+    <section class="modern-section introduction-section">
+
+        <div class="section-heading">
+
+            <p>
+                ABOUT MY WORK
+            </p>
+
+            <h2>
+
+                Turning Ideas Into
+                <span>
+                    Digital Solutions
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="introduction-content">
+
+
+            <div class="intro-text">
+
+                <p>
+
+                    Welcome to my website. This is my
+                    online space where you can learn
+                    more about me, my work and the
+                    services I provide.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy using technology to create
+                    websites and digital solutions that
+                    are simple, useful and easy to use.
+
+                </p>
+
+
+                <a
+                    href="/about"
+                    class="text-link"
+                >
+
+                    Learn More About Me →
+
+                </a>
+
+            </div>
+
+
+            <div class="intro-stat-box">
+
+
+                <div class="intro-stat">
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        Creative
+                    </span>
+
+                </div>
+
+
+                <div class="intro-stat">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        Modern
+                    </span>
+
+                </div>
+
+
+                <div class="intro-stat">
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        Reliable
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="modern-section services-section">
+
+
+        <div class="section-heading">
+
+            <p>
+                WHAT I DO
+            </p>
+
+            <h2>
+
+                Services I
+                <span>
+                    Provide
+                </span>
+
+            </h2>
+
+            <p class="section-subtitle">
+
+                Practical technology services designed
+                to help individuals and businesses
+                build a strong online presence.
+
+            </p>
+
+        </div>
+
+
+        <div class="modern-service-grid">
+
+
+            <!-- SERVICE 1 -->
+
+            <div class="modern-service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+
+                <h3>
+                    Web Development
+                </h3>
+
+
+                <p>
+
+                    Building responsive websites using
+                    modern web technologies such as
+                    Python, Flask, HTML and CSS.
+
+                </p>
+
+
+                <a href="/services">
+
+                    Learn More →
+
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+
+            <div class="modern-service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+
+                <h3>
+                    Website Design
+                </h3>
+
+
+                <p>
+
+                    Creating clean, attractive and
+                    user-friendly websites that work
+                    across computers and mobile devices.
+
+                </p>
+
+
+                <a href="/services">
+
+                    Learn More →
+
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+
+            <div class="modern-service-card">
+
+                <div class="service-icon">
+                    ⚙️
+                </div>
+
+
+                <h3>
+                    Digital Solutions
+                </h3>
+
+
+                <p>
+
+                    Developing simple digital tools
+                    and solutions designed to solve
+                    everyday problems.
+
+                </p>
+
+
+                <a href="/services">
+
+                    Learn More →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS PREVIEW
+    ========================== -->
+
+    <section class="modern-section projects-preview-section">
+
+
+        <div class="section-heading">
+
+            <p>
+                MY WORK
+            </p>
+
+            <h2>
+
+                Recent
+                <span>
+                    Projects
+                </span>
+
+            </h2>
+
+            <p class="section-subtitle">
+
+                Explore some of the digital work
+                and projects I have been building.
+
+            </p>
+
+        </div>
+
+
+        <div class="project-preview-grid">
+
+
+            <div class="project-preview-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h3>
+                    Personal Website
+                </h3>
+
+                <p>
+
+                    A modern personal website built
+                    using Flask, HTML and CSS.
+
+                </p>
+
+                <a href="/projects">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-preview-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>
+                    Contact System
+                </h3>
+
+                <p>
+
+                    A website contact system that stores
+                    visitor messages securely.
+
+                </p>
+
+                <a href="/projects">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-preview-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <h3>
+                    Admin Dashboard
+                </h3>
+
+                <p>
+
+                    A simple dashboard for managing
+                    website messages and content.
+
+                </p>
+
+                <a href="/projects">
+                    View Project →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="center-button">
+
+            <a
+                href="/projects"
+                class="modern-primary-button"
+            >
+
+                View All Projects →
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
+    <section class="modern-cta">
+
+
+        <div class="modern-cta-content">
+
+            <p>
+                LET'S WORK TOGETHER
+            </p>
+
+
+            <h2>
+
+                Have an idea for a
+                <span>
+                    website?
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Let's turn your idea into a
+                useful digital experience.
+
+            </p>
+
+
+            <a
+                href="/contact"
+                class="modern-cta-button"
+            >
+
+                Get In Touch →
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         PROFESSIONAL FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Dennis Ngetich
+                </h3>
+
+
+                <p>
+
+                    Building modern websites and
+                    simple digital solutions using
+                    technology.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Home
+                </a>
+
+
+                <a href="/about">
+                    About
+                </a>
+
+
+                <a href="/services">
+                    Services
+                </a>
+
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    Kenya
+                </p>
+
+
+                <p>
+                    0728 426 289
+                </p>
+
+
+                <a
+                    href="https://wa.me/254728426289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Dennis Ngetich.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <a
+        href="#top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+
+        ↑
+
+    </a>
+
+
+    <!-- =========================
+         WHATSAPP BUTTON
+    ========================== -->
+
+    {% include "whatsapp.html" %}
+
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const mobileMenuButton =
+            document.getElementById(
+                "mobileMenuButton"
+            );
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        mobileMenuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle(
+                    "mobile-open"
+                );
+
+
+                const isOpen =
+                    navLinks.classList.contains(
+                        "mobile-open"
+                    );
+
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+
+                mobileMenuButton.innerHTML =
+                    isOpen ? "✕" : "☰";
+
+            }
+        );
+
+
+        const menuLinks =
+            navLinks.querySelectorAll("a");
+
+
+        menuLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "mobile-open"
+                        );
+
+
+                        mobileMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        mobileMenuButton.innerHTML =
+                            "☰";
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

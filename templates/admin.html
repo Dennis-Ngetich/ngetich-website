@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dennis Ngetich | Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         ADMIN HEADER
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/logo.png'
+                    ) }}"
+                    alt="Ngetich Logo"
+                >
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="/">
+                    Website
+                </a>
+
+                <a href="/about">
+                    About
+                </a>
+
+                <a href="/services">
+                    Services
+                </a>
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         ADMIN SECTION
+    ========================== -->
+
+    <section class="section admin-section">
+
+
+        {% if not session.get("admin_logged_in") %}
+
+
+            <!-- =========================
+                 ADMIN LOGIN
+            ========================== -->
+
+            <div class="admin-login">
+
+                <p class="welcome">
+                    ADMIN AREA
+                </p>
+
+
+                <h1>
+
+                    Admin
+
+                    <span>
+                        Login
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Enter your administrator password
+                    to access your website dashboard.
+
+                </p>
+
+
+                {% if error %}
+
+                <div class="error-message">
+
+                    {{ error }}
+
+                </div>
+
+                {% endif %}
+
+
+                <form method="POST"
+                      action="/admin">
+
+                    <label for="password">
+
+                        Administrator Password
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+
+                    <button type="submit">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+        {% else %}
+
+
+            <!-- =========================
+                 ADMIN DASHBOARD
+            ========================== -->
+
+            <div class="admin-dashboard">
+
+                <p class="welcome">
+                    ADMIN DASHBOARD
+                </p>
+
+
+                <h1>
+
+                    Welcome,
+
+                    <span>
+                        Dennis
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Manage your website and view
+                    messages sent by visitors.
+
+                </p>
+
+
+                <!-- =========================
+                     STATISTICS
+                ========================== -->
+
+                <div class="dashboard-stats">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📩
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <h3>
+                                Total Messages
+                            </h3>
+
+
+                            <strong>
+                                {{ total_messages }}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📅
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <h3>
+                                Messages Today
+                            </h3>
+
+
+                            <strong>
+                                {{ messages_today }}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📁
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <h3>
+                                Projects
+                            </h3>
+
+
+                            <strong>
+                                4
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     DASHBOARD MENU
+                ========================== -->
+
+                <div class="admin-menu">
+
+
+                    <a
+                        href="/"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            🏠 Website Home
+                        </h3>
+
+                        <p>
+                            View your public website.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="/about"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            👤 About
+                        </h3>
+
+                        <p>
+                            View your About page.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="/services"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            🛠️ Services
+                        </h3>
+
+                        <p>
+                            View your services.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="/projects"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            📁 Projects
+                        </h3>
+
+                        <p>
+                            View your projects.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="/contact"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            📞 Contact
+                        </h3>
+
+                        <p>
+                            View your contact page.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="#messages"
+                        class="admin-menu-card"
+                    >
+
+                        <h3>
+                            📩 Messages
+                        </h3>
+
+                        <p>
+                            View visitor messages below.
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- =========================
+                     MESSAGE COUNT
+                ========================== -->
+
+                <div class="message-count">
+
+                    <strong>
+                        {{ messages|length }}
+                    </strong>
+
+                    message(s) received from
+                    website visitors.
+
+                </div>
+
+
+                <!-- =========================
+                     VISITOR MESSAGES
+                ========================== -->
+
+                <h2
+                    id="messages"
+                    class="dashboard-title"
+                >
+
+                    Visitor Messages
+
+                </h2>
+
+
+                {% if messages %}
+
+
+                    {% for message in messages %}
+
+
+                    <!-- =========================
+                         MESSAGE BOX
+                    ========================== -->
+
+                    <div class="message-box">
+
+
+                        <!-- NAME -->
+
+                        <h3>
+
+                            {{ message["name"] }}
+
+                        </h3>
+
+
+                        <!-- EMAIL -->
+
+                        <p>
+
+                            <strong>
+                                Email:
+                            </strong>
+
+                            {{ message["email"] }}
+
+                        </p>
+
+
+                        <!-- DATE -->
+
+                        <p class="message-date">
+
+                            <strong>
+                                Received:
+                            </strong>
+
+                            {{ message["created_at"] }}
+
+                        </p>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="message-content">
+
+                            {{ message["message"] }}
+
+                        </div>
+
+
+                        <!-- =========================
+                             MESSAGE ACTIONS
+                        ========================== -->
+
+                        <div class="message-actions">
+
+
+                            <!-- REPLY -->
+
+                            <a
+                                href="{{ url_for(
+                                    'reply_message',
+                                    message_id=message['id']
+                                ) }}"
+                                class="reply-button"
+                            >
+
+                                ✉️ Reply
+
+                            </a>
+
+
+                            <!-- DELETE -->
+
+                            <form
+                                method="POST"
+                                action="{{ url_for(
+                                    'delete_message',
+                                    message_id=message['id']
+                                ) }}"
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="delete-button"
+                                    onclick="return confirm(
+                                        'Are you sure you want to delete this message?'
+                                    );"
+                                >
+
+                                    Delete Message
+
+                                </button>
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    {% endfor %}
+
+
+                {% else %}
+
+
+                    <!-- =========================
+                         NO MESSAGES
+                    ========================== -->
+
+                    <div class="no-messages">
+
+                        <h3>
+                            No Messages Yet
+                        </h3>
+
+
+                        <p>
+
+                            When visitors send messages
+                            through your contact form,
+                            they will appear here.
+
+                        </p>
+
+                    </div>
+
+                {% endif %}
+
+
+                <!-- =========================
+                     ADMIN ACTIONS
+                ========================== -->
+
+                <div class="admin-actions">
+
+
+                    <a
+                        href="/"
+                        class="btn"
+                    >
+
+                        View Website
+
+                    </a>
+
+
+                    <a
+                        href="/logout"
+                        class="btn admin-logout"
+                    >
+
+                        Logout
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        {% endif %}
+
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Dennis Ngetich
+                </h3>
+
+
+                <p>
+
+                    Website administration
+                    and digital solutions.
+
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Website
+                </a>
+
+
+                <a href="/about">
+                    About
+                </a>
+
+
+                <a href="/services">
+                    Services
+                </a>
+
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- ADMINISTRATION -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Administration
+                </h3>
+
+
+                {% if session.get("admin_logged_in") %}
+
+                <a href="/logout">
+                    Logout
+                </a>
+
+                {% else %}
+
+                <a href="/admin">
+                    Admin Login
+                </a>
+
+                {% endif %}
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Dennis Ngetich.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <a
+        href="#top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+
+        ↑
+
+    </a>
+
+
+</body>
+
+</html>

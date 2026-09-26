@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dennis Ngetich | Contact</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/logo.png'
+                    ) }}"
+                    alt="Ngetich Logo"
+                >
+
+            </div>
+
+
+            <!-- NAVIGATION LINKS -->
+
+            <div class="nav-links">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/about">
+                    About
+                </a>
+
+                <a href="/services">
+                    Services
+                </a>
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTACT HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-text">
+
+                <p class="welcome">
+                    GET IN TOUCH
+                </p>
+
+
+                <h1>
+
+                    Contact
+
+                    <span>
+                        Me
+                    </span>
+
+                </h1>
+
+
+                <p class="description">
+
+                    Have a question, project idea or
+                    something you would like to discuss?
+
+                    Send me a message and I will get
+                    back to you.
+
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/profile.jpg'
+                    ) }}"
+                    alt="Dennis Ngetich"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section class="section contact-section">
+
+        <h2>
+            Let's Talk
+        </h2>
+
+
+        <p>
+
+            I would love to hear from you.
+            Use the contact details below or
+            send me a message using the form.
+
+        </p>
+
+
+        <!-- =========================
+             CONTACT DETAILS
+        ========================== -->
+
+        <div class="contact-details">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <h3>
+                    Phone
+                </h3>
+
+
+                <a
+                    href="tel:+254728426289"
+                    class="contact-link"
+                >
+
+                    0728 426 289
+
+                </a>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+
+                <a
+                    href="https://wa.me/254728426289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+
+                    Chat on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-card">
+
+                <h3>
+                    Location
+                </h3>
+
+
+                <p>
+                    Kenya
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             SUCCESS MESSAGE
+        ========================== -->
+
+        {% if success %}
+
+        <div class="success-message">
+
+            Thank you, {{ name }}!
+
+            Your message has been received
+            successfully.
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- =========================
+             CONTACT FORM
+        ========================== -->
+
+        <div class="contact-form-container">
+
+            <h2>
+                Send Me a Message
+            </h2>
+
+
+            <form method="POST"
+                  action="/contact">
+
+
+                <!-- NAME -->
+
+                <label for="name">
+                    Your Name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <label for="email">
+                    Your Email
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- MESSAGE -->
+
+                <label for="message">
+                    Your Message
+                </label>
+
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    rows="7"
+                    required
+                ></textarea>
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
+    <section class="cta">
+
+        <h2>
+            Let's Build Something Together
+        </h2>
+
+
+        <p>
+
+            Have an idea you would like to
+            turn into a website or digital
+            solution?
+
+        </p>
+
+
+        <a href="/services"
+           class="btn">
+
+            View My Services
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         PROFESSIONAL FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Dennis Ngetich
+                </h3>
+
+
+                <p>
+
+                    Building modern websites and
+                    simple digital solutions using
+                    technology.
+
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Home
+                </a>
+
+
+                <a href="/about">
+                    About
+                </a>
+
+
+                <a href="/services">
+                    Services
+                </a>
+
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    Kenya
+                </p>
+
+
+                <a href="tel:+254728426289">
+                    0728 426 289
+                </a>
+
+
+                <a
+                    href="https://wa.me/254728426289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Dennis Ngetich.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <a
+        href="#top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+
+        ↑
+
+    </a>
+
+
+    <!-- =========================
+         WHATSAPP BUTTON
+    ========================== -->
+
+    {% include "whatsapp.html" %}
+
+
+</body>
+
+</html>

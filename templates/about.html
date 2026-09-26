@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dennis Ngetich | About</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <a href="/">
+
+                    <img
+                        src="{{ url_for(
+                            'static',
+                            filename='images/logo.png'
+                        ) }}"
+                        alt="Ngetich Logo"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                ☰
+
+            </button>
+
+
+            <!-- NAVIGATION LINKS -->
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/about" class="active">
+                    About
+                </a>
+
+                <a href="/services">
+                    Services
+                </a>
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-text">
+
+                <p class="welcome">
+                    GET TO KNOW ME
+                </p>
+
+
+                <h1>
+
+                    About
+
+                    <span>
+                        Dennis Ngetich
+                    </span>
+
+                </h1>
+
+
+                <p class="description">
+
+                    Welcome to my personal website.
+
+                    Here you can learn more about me,
+                    my interests and the work I am
+                    developing.
+
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/profile.jpg'
+                    ) }}"
+                    alt="Dennis Ngetich"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT INFORMATION
+    ========================== -->
+
+    <section class="section">
+
+        <h2>
+            Who I Am
+        </h2>
+
+
+        <p>
+
+            My name is Dennis Ngetich.
+
+            I am interested in technology,
+            web development and creating
+            useful digital solutions.
+
+        </p>
+
+
+        <p>
+
+            I am continuously learning and
+            developing my skills in programming,
+            website design and modern web
+            technologies.
+
+        </p>
+
+
+        <p>
+
+            My goal is to use technology to
+            create websites and digital solutions
+            that are simple, useful and easy
+            to use.
+
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         MY INTERESTS
+    ========================== -->
+
+    <section class="section services-preview">
+
+        <h2>
+            My Interests
+        </h2>
+
+
+        <div class="service-boxes">
+
+
+            <!-- INTEREST 1 -->
+
+            <div class="service-box">
+
+                <h3>
+                    Technology
+                </h3>
+
+                <p>
+
+                    Learning new technologies and
+                    discovering how they can be used
+                    to solve real-world problems.
+
+                </p>
+
+            </div>
+
+
+            <!-- INTEREST 2 -->
+
+            <div class="service-box">
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+
+                    Building websites using Python,
+                    Flask, HTML and CSS while
+                    continuously improving my skills.
+
+                </p>
+
+            </div>
+
+
+            <!-- INTEREST 3 -->
+
+            <div class="service-box">
+
+                <h3>
+                    Digital Innovation
+                </h3>
+
+                <p>
+
+                    Exploring ideas that can turn
+                    everyday challenges into simple
+                    digital solutions.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
+    <section class="cta">
+
+        <h2>
+            Let's Connect
+        </h2>
+
+
+        <p>
+
+            If you would like to get in touch,
+            feel free to send me a message.
+
+        </p>
+
+
+        <a href="/contact"
+           class="btn">
+
+            Contact Me
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         PROFESSIONAL FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Dennis Ngetich
+                </h3>
+
+                <p>
+
+                    Building modern websites and
+                    simple digital solutions using
+                    technology.
+
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Home
+                </a>
+
+
+                <a href="/about">
+                    About
+                </a>
+
+
+                <a href="/services">
+                    Services
+                </a>
+
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+
+                <a href="/contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    Kenya
+                </p>
+
+
+                <p>
+                    0728 426 289
+                </p>
+
+
+                <a
+                    href="https://wa.me/254728426289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Dennis Ngetich.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <a
+        href="#top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+
+        ↑
+
+    </a>
+
+
+    <!-- =========================
+         WHATSAPP BUTTON
+    ========================== -->
+
+    {% include "whatsapp.html" %}
+
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const mobileMenuButton =
+            document.getElementById(
+                "mobileMenuButton"
+            );
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        mobileMenuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle(
+                    "mobile-open"
+                );
+
+
+                const isOpen =
+                    navLinks.classList.contains(
+                        "mobile-open"
+                    );
+
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+
+                mobileMenuButton.innerHTML =
+                    isOpen ? "✕" : "☰";
+
+            }
+        );
+
+
+        const menuLinks =
+            navLinks.querySelectorAll("a");
+
+
+        menuLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "mobile-open"
+                        );
+
+
+                        mobileMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        mobileMenuButton.innerHTML =
+                            "☰";
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
