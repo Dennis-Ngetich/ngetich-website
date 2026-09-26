@@ -1,21 +1,37 @@
 from flask import Flask, render_template, request, redirect, session
 import sqlite3
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+
+# =========================
+# LOAD ENVIRONMENT VARIABLES
+# =========================
+
+load_dotenv()
+
 
 app = Flask(__name__)
+
 
 # =========================
 # SECRET KEY
 # =========================
 
-app.secret_key = "ngetich-secret-key"
+app.secret_key = os.getenv(
+    "SECRET_KEY",
+    "temporary-local-key"
+)
 
 
 # =========================
 # ADMIN PASSWORD
 # =========================
 
-ADMIN_PASSWORD = "1234"
+ADMIN_PASSWORD = os.getenv(
+    "ADMIN_PASSWORD"
+)
 
 
 # =========================
